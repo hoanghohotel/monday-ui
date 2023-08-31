@@ -1,6 +1,6 @@
 {
   "name": "monday-ui-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Official mondayui.com UI resources for application development in React.js",
   "main": "./dist/main.js",
   "types": "./dist/types.d.ts",
