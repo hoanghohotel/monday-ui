@@ -1,4 +1,6 @@
 # Changelog
 
-## 1.00.0 (2023-08-28)
-First Release
+## 1.0.0 (2023-08-30)
+
+#### First Release
+* First Release
