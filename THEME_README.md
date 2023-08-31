@@ -10,11 +10,11 @@ Our theme mechanism is based on [CSS variables](https://developer.mozilla.org/en
 We define our initial styling at the body/root element level - doing so we are exposing our css variables (colors) to all child elements. When we want to apply a specific theme we simply add the theme class to a common ancestor (body for example) and all the components should change their appearance.
 
 #### Creating a theme.
-We extracted our css variables to a different repo (@mondaydotcomorg/monday-ui-style)
-In order to create a new theme you need to override all of the keys (the list of keys can be found in the monday-ui-style repo)
+We extracted our css variables to a different repo (@mondaydotcomorg/monday-style)
+In order to create a new theme you need to override all of the keys (the list of keys can be found in the monday-style repo)
 
 #### Adding a new variable to a theme
-Adding a key should be done in the @mondaydotcomorg/monday-ui-style repo
+Adding a key should be done in the @mondaydotcomorg/monday-style repo
 
 ### Theme example:
 ```css

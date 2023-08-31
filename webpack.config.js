@@ -88,7 +88,7 @@ module.exports = options => {
         },
         {
           test: /\.(js|jsx)$/,
-          exclude: /node_modules\/(?!monday-ui-style)(.*)/,
+          exclude: /node_modules\/(?!monday-style)(.*)/,
           use: ["babel-loader"]
         },
         {
@@ -142,7 +142,7 @@ module.exports = options => {
             to: "assets/"
           },
           {
-            from: "node_modules/monday-ui-style/dist/index.min.css",
+            from: "node_modules/monday-style/dist/index.min.css",
             to: "tokens/tokens.css"
           }
         ]

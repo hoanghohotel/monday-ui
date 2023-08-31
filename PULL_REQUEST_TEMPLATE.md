@@ -16,7 +16,7 @@ Please go over the checklist and make sure all conditions are met.
 - [ ] Styles are added to `NewComponent.modules.scss` file inside the `NewComponent` folder.
 - [ ] Component uses CSS Modules.
 - [ ] Design is compatible with [Monday Design System](https://design.mondayui.com/).
-- [ ] Styles are defined using [monday-ui-style](https://github.com/hoanghohotel/monday-ui-style) tokens
+- [ ] Styles are defined using [monday-style](https://github.com/hoanghohotel/monday-style) tokens
 - [ ] Displays correctly in all the themes
 
 #### Storybook
