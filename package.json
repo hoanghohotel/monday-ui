@@ -70,7 +70,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoanghohotel/monday-ui-core.git"
+    "url": "git+https://github.com/hoanghohotel/monday-ui.git"
   },
   "author": "",
   "license": "MIT",
@@ -81,9 +81,9 @@
     "THEME_README.md"
   ],
   "bugs": {
-    "url": "https://github.com/hoanghohotel/monday-ui-core/issues"
+    "url": "https://github.com/hoanghohotel/monday-ui/issues"
   },
-  "homepage": "https://github.com/hoanghohotel/monday-ui-core#readme",
+  "homepage": "https://github.com/hoanghohotel/monday-ui#readme",
   "dependencies": {
     "@popperjs/core": "2.11.6",
     "a11y-dialog": "^7.5.2",
@@ -272,5 +272,5 @@
     }
   },
   "readme": "ERROR: No README data found!",
-  "_id": "monday-ui-core@1.0.1"
+  "_id": "monday-ui@1.0.1"
 }

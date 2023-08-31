@@ -69,7 +69,7 @@ If you use jest snapshot testing, fix `jest.config.js` to use `moduleNameMapper`
 
 ```diff
 + moduleNameMapper: {
-+     "monday-ui-core": "monday-ui-core/dist/mocked_classnames_esm/src/index.js"
++     "monday-ui": "monday-ui/dist/mocked_classnames_esm/src/index.js"
 + }
 ```
 
@@ -79,13 +79,13 @@ CommonJS imports for components and hooks from the `dist` are going to be deprec
 Before:
 
 ```diff
-- import Button from "monday-ui-core/dist/Button";
+- import Button from "monday-ui/dist/Button";
 ```
 
 After:
 
 ```diff
-+ import { Button } from "monday-ui-core";
++ import { Button } from "monday-ui";
 ```
 
 ### Replace main.css import with tokens import
@@ -95,11 +95,11 @@ Previously `main.css` contained all the style definitions + `monday-style` token
 Before:
 
 ```diff
-- import "monday-ui-core/dist/main.css";
+- import "monday-ui/dist/main.css";
 ```
 
 After:
 
 ```diff
-+ import "monday-ui-core/tokens";
++ import "monday-ui/tokens";
 ```

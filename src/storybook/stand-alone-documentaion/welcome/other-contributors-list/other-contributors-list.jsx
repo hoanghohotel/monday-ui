@@ -53,7 +53,7 @@ const STATIC_CONTRIBUTERS = [
 export const OtherContributorsList = () => {
   const [contributorsJson, setContributorsJson] = useState();
   useEffect(() => {
-    fetch("https://api.github.com/repos/hoanghohotel/monday-ui-core/contributors")
+    fetch("https://api.github.com/repos/hoanghohotel/monday-ui/contributors")
       .then(response => response.json())
       .then(data => setContributorsJson(data));
   }, []);

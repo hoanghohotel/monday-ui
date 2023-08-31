@@ -8,13 +8,13 @@
 | --------- | --------- | --------- | --------- | --------- | --------- |
 | last 4 versions| last 4 versions| 14+| last 2 versions| last 2 versions| last 2 versions |
 ##
-[![Chromatic](https://github.com/hoanghohotel/monday-ui-core/actions/workflows/chromatic.yml/badge.svg)](https://github.com/hoanghohotel/monday-ui-core/actions/workflows/chromatic.yml)
+[![Chromatic](https://github.com/hoanghohotel/monday-ui/actions/workflows/chromatic.yml/badge.svg)](https://github.com/hoanghohotel/monday-ui/actions/workflows/chromatic.yml)
 ## Installation
 
 Install the component library
 
 ```
-$ npm install monday-ui-core
+$ npm install monday-ui
 ```
 
 ## Usage
@@ -22,13 +22,13 @@ $ npm install monday-ui-core
 Components are imported from the library's root entry:
 
 ```javascript
-import { Button } from "monday-ui-core";
+import { Button } from "monday-ui";
 ```
 
 In order to load all the relevant CSS tokens, you should import the `tokens` file at the root of your application file
 
 ```javascript
-import "monday-ui-core/tokens";
+import "monday-ui/tokens";
 ```
 
 _If your project is importing files differently - read more [here](DEPRECATED_IMPORTS.md)._
@@ -94,5 +94,5 @@ Perform the following steps to **release** a **new version**:
 
 - Bump the version in `package.json`
 - Merge into `origin/master`
-- [Release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) the new version in the [monday-ui-core
-  ](https://github.com/hoanghohotel/monday-ui-core)
+- [Release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) the new version in the [monday-ui
+  ](https://github.com/hoanghohotel/monday-ui)
