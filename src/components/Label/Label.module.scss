@@ -1,0 +1,107 @@
+@import "../../styles/typography";
+@import "../../styles/global-css-settings";
+@import "../../styles/keyframes";
+
+.label {
+  @include smoothing-text;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-small);
+  padding: 1px var(--spacing-small);
+  position: relative;
+}
+
+.withLeg {
+  border-radius: var(--border-radius-small) var(--border-radius-small) var(--border-radius-small) 0;
+}
+
+.legWrapper {
+  position: absolute;
+  height: 8px;
+  top: 100%;
+  left: 0;
+  display: inline-flex;
+}
+
+.withAnimation {
+  animation: label-spin-in-emphasized var(--motion-expressive-short) var(--motion-timing-emphasize);
+  transform-origin: bottom left;
+}
+
+.kindFill.colorPrimary {
+  background-color: var(--primary-color);
+}
+
+.kindFill.colorPrimary svg path {
+  fill: var(--primary-color);
+}
+
+.kindFill.colorDark {
+  background-color: var(--inverted-color-background);
+}
+
+.kindFill.colorDark svg path {
+  fill: var(--inverted-color-background);
+}
+
+.kindFill.colorNegative {
+  background-color: var(--negative-color);
+}
+
+.kindFill.colorNegative svg path {
+  fill: var(--negative-color);
+}
+
+.kindFill.colorPositive {
+  background-color: var(--positive-color);
+}
+
+.kindFill.colorPositive svg path {
+  fill: var(--positive-color);
+}
+
+.kindLine {
+  border: 1px solid currentColor;
+}
+
+.kindLine .legWrapper {
+  left: -1px;
+  top: calc(100% + 1px);
+}
+
+.kindLine.colorPrimary {
+  color: var(--primary-color);
+}
+
+.kindLine.colorPrimary svg path {
+  fill: var(--primary-color);
+}
+
+.kindLine.colorDark {
+  color: var(--inverted-color-background);
+}
+
+.kindLine.colorDark svg path {
+  fill: var(--inverted-color-background);
+}
+
+.kindLine.colorNegative {
+  color: var(--negative-color);
+}
+
+.kindLine.colorNegative svg path {
+  fill: var(--negative-color);
+}
+
+.kindLine.colorPositive {
+  color: var(--positive-color);
+}
+
+.kindLine.colorPositive svg path {
+  fill: var(--positive-color);
+}
+
+@include keyframe(label-spin-in-emphasized) {
+  @include spin-in-emphasized();
+}

@@ -1,0 +1,12 @@
+@import "../../styles/typography";
+@import "../../styles/global-css-settings";
+@import "../../styles/states";
+
+.steps {
+  .contentOnTop {
+    margin-top: var(--spacing-medium);
+  }
+  .contentOnBottom {
+    margin-bottom: var(--spacing-small);
+  }
+}

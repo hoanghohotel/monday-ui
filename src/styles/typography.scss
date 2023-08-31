@@ -1,0 +1,122 @@
+@use "sass:string";
+@import "~monday-ui-style/dist/mixins";
+
+@function contain($list, $value) {
+  @return not not index($list, $value);
+}
+
+@function capitalize($string) {
+  @return to-upper-case(string.slice($string, 1, 1)) + string.slice($string, 2);
+}
+
+@function camelize($string) {
+  $progress: $string;
+  $result: "";
+  $exclude: " ", "-", "–", "—", "_", ",", ";", ":", ".";
+
+  @while str-length($progress) > 0 {
+    $char: string.slice($progress, 1, 1);
+
+    @if contain($exclude, $char) {
+      $progress: capitalize(string.slice($progress, 2, 2)) + string.slice($progress, 3);
+    } @else {
+      $result: $result + $char;
+      $progress: string.slice($progress, 2);
+    }
+  }
+
+  @return $result;
+}
+
+@mixin create-text-classes() {
+  @include create-typography-classes($textClasses, text);
+}
+
+@mixin create-title-classes() {
+  @include create-typography-classes($headingClasses, null);
+}
+
+@mixin create-typography-classes($classes, $token-prefix) {
+  @each $class-prefix, $weight-types in $classes {
+    @each $weight-type in $weight-types {
+      $class-name: camelize(#{$class-prefix}-#{$weight-type});
+
+      .#{$class-name} {
+        // if class is a heading class
+        @if str-slice($class-prefix, 1, 1) == "h" {
+          @include vibe-heading($class-prefix, $weight-type);
+        } @else {
+          @include vibe-text($class-prefix, $weight-type);
+        }
+      }
+    }
+  }
+}
+
+$headingClasses: (
+  "h1": (
+    "bold",
+    "normal",
+    "light"
+  ),
+  "h2": (
+    "bold",
+    "normal",
+    "light"
+  ),
+  "h3": (
+    "bold",
+    "normal",
+    "light"
+  )
+);
+
+$textClasses: (
+    "text1": ("bold", "medium", "normal"),
+    "text2": ("bold", "medium", "normal")
+);
+
+@mixin base-font($font-variable) {
+  color: var(--primary-text-color);
+  -webkit-font-smoothing: var(--font-smoothing-webkit);
+  -moz-osx-font-smoothing: var(--font-smoothing-moz);
+  font: $font-variable;
+}
+
+@mixin smoothing-text {
+  -webkit-font-smoothing: var(--font-smoothing-webkit);
+  -moz-osx-font-smoothing: var(--font-smoothing-moz);
+}
+
+@mixin label-text {
+  @include smoothing-text;
+  @include vibe-text(text2, normal);
+}
+
+// Caption / Subtext (small)
+@mixin font-caption {
+  @include vibe-text(text2, normal);
+  @include smoothing-text;
+}
+
+@mixin font-input {
+  @include vibe-text(text2, normal);
+}
+
+@mixin line-clamp($lines: 1le) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  white-space: initial; // doesn't work with white-space: no-wrap
+}
+
+@mixin heading-padding {
+  padding: 0 4px;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

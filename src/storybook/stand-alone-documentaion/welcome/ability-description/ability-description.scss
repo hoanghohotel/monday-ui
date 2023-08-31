@@ -1,0 +1,25 @@
+@import "../../../styles/typography";
+
+.monday-storybook-ability-description {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-color: var(--layout-border-color);
+  padding: var(--spacing-large);
+  width: 100%;
+  &_image {
+    height: 48px;
+    width: 48px;
+  }
+
+  &_title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: $text-line-height;
+  }
+
+  &_content {
+    @include small-text;
+    margin-bottom: var(--spacing-large);
+  }
+}

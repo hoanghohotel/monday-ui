@@ -1,0 +1,16 @@
+@import "../../../styles/global-css-settings";
+@import "../../../styles/typography";
+
+.bannerButton {
+  // TODO Mismatched property value - fix other
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+:global(.dark-app-theme) .darkBackground .bannerButton {
+  background-color: var(--dark-background-color);
+}
+
+.marginLeft {
+  margin-left: var(--spacing-small);
+}

@@ -1,0 +1,11 @@
+@import "../../../styles/global-css-settings";
+
+.bannerText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.marginLeft {
+  margin-left: var(--spacing-small);
+}

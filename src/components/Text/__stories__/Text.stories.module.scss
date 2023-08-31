@@ -1,0 +1,20 @@
+@mixin spacing {
+  padding: var(--sb-spacing-small);
+}
+.primaryBackground {
+  @include spacing;
+  background-color: var(--primary-color);
+}
+
+.invertedBackground {
+  @include spacing;
+  background-color: var(--inverted-color-background);
+}
+
+.smallRectangle {
+  width: 150px;
+}
+
+.mediumRectangle {
+  width: 420px;
+}

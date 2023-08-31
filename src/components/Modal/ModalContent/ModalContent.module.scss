@@ -1,0 +1,7 @@
+@import "../../../styles/states";
+
+.container {
+  flex-grow: 1;
+  overflow: auto;
+  @include scroller();
+}
